@@ -58,7 +58,8 @@
             <br>
             <hr>
             <h4>Instructions</h4>
-            <h5>Read two intelligence documents that are relevant to potential terrorist attacks below and tell us the connections between the two documents through following two tasks</h5>
+            <h5>Read two intelligence documents that are relevant to potential terrorist attacks below and tell us the
+                connections between the two documents through following two tasks</h5>
 
             <div class="row">
                 <div class="col-sm-6 col-md-6">
@@ -100,34 +101,30 @@
             </div>
 
 
-
-            <h4>Summary</h4>
-            <h5>Find any common factors between these two documents and provides a summary, you should provides at least two connections and express their commons, please input all the important entities from documents.</h5>
             <div>
-                <form>
-                    <div class="form-group">
-                        <!--<label for="comment">Step 2. provide a summary to describe how the documents are related to each-->
-                            <!--other.</label>-->
-                        <textarea class="form-control" rows="5" id="comment" style="resize:none;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary center-block">Next</button>
-                </form>
+                <div>
+                    <h4>Entity</h4>
+                    <h5>find and describe the pairwise relationship between key entities in the texts in the two documents, list the connections in a format of (entity1, entity2, relationship description)</h5>
+                    <textarea class="form-control" rows="5" id="entity" style="resize:none;"></textarea>
+                </div>
+                <div>
+                    <h4>Summary</h4>
+                    <h5>
+                        Evidence File, put them together into a subgraph, if you think the connections should be combined into one (by direct deduction and so that the relationship is neater), go ahead but make sure you annotate the path for each new connection after the relationship description.
+                    </h5>
+                    <textarea class="form-control" rows="5" id="summary" style="resize:none;"></textarea>
+                </div>
+                <div>
+                    <h4>Hypothesis</h4>
+                    <h5>
+                        Summarize the information based on two documents. Schema into narrative statements that contain “who, what, where, when” as much as possible.
+                    </h5>
+                    <textarea class="form-control" rows="5" id="hypo" style="resize:none;"></textarea>
+                </div>
+
+                <br>
+                <button class="btn btn-primary center-block" onclick="submit()">Next</button>
             </div>
-
-            <h4>Hypothesis</h4>
-            <h5>Based on these two documents, do you have any hypothesis and explain your evidences from both documents and your knowledge</h5>
-            <div>
-                <form>
-                    <div class="form-group">
-                        <!--<label for="comment">Step 2. provide a summary to describe how the documents are related to each-->
-                            <!--other.</label>-->
-                        <textarea class="form-control" rows="5" id="comment" style="resize:none;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary center-block">Submit</button>
-                </form>
-            </div>
-
-
 
         </div>
     </div>
