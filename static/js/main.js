@@ -12,4 +12,10 @@ function submit(){
 	console.log(entity);
 	console.log(summary);
 	console.log(hypo);
+	
+	$.post('submit',{entity: entity, summary: summary, hypo: hypo}, function(data, textStatus, jqXHR){
+		console.log(data);
+		$('#main').html(data);
+	});
+	
 }
