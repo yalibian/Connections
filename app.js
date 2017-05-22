@@ -26,11 +26,10 @@ app.use(koaStatic(
 app.use(async (ctx) => {
 	console.log(ctx.url);
 	if ( ctx.url === '/submit' && ctx.method === 'POST' ) {
-		let postData = ctx.request.body
+		let postData = ctx.request.body;
+		console.log(postData);
 		// store postData into db
-		
-		let check = await ctx.mongo.db('crowd').collection('connection').find().toArray();
-		console.log(check);
+		const result = await ctx.mongo.db('crowd').collection('connection').insert(postData);
 		
 		// console.log(postData)
 		ctx.body = "Thanks for you help!"
