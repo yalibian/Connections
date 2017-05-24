@@ -18,6 +18,8 @@
 .navbar {
     margin-bottom: 0;
     border-radius: 0;
+    min-height: 40px;
+    max-height: 40px;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
