@@ -1,71 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bootstrap Example</title>
+    <title>Connection for CrowdSPIRE</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="lib/jquery.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
 
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {
-            height: 450px
-        }
-
-        /* Set gray background color and 100% height */
-        .sidenav {
-            padding-top: 20px;
-            background-color: #f1f1f1;
-            height: 100%;
-        }
-
-        /* Set black background color, white text and some padding */
-        footer {
-            background-color: #555;
-            color: white;
-            padding: 15px;
-        }
-
-        /* On small screens, set height to 'auto' for sidenav and grid */
-        @media screen and (max-width: 767px) {
-            .sidenav {
-                height: auto;
-                padding: 15px;
-            }
-
-            .row.content {
-                height: auto;
-            }
-        }
-    </style>
 </head>
 <body style=" background-color: #f1f1f1;">
-
 <nav class="navbar navbar-inverse text-center">
     <h2 style="color: white">Document Connections</h2>
 </nav>
-<div id="main" class="container-fluid text-center">
-    <div class="row content">
-        <div class="col-sm-8 text-left col-md-offset-2">
-            <!--<br>-->
-            <!--<hr>-->
+
+<div id="main" class="container text-center">
+    <div id='qrow' class="row content text-center">
+        <div id="q" class="col-md-8 text-left centered">
             <h4>Instructions</h4>
             <h5>Read two intelligence documents that are relevant to potential terrorist attacks below and tell us the
                 connections between the two documents through following two tasks</h5>
 
-            <div class="row">
-                <div class="col-sm-6 col-md-6">
+            <div class="row" style="min-width: 960px; max-width: 960px">
+                <div class="doc col-md-2">
                     <div class="panel panel-default">
-                        <div class="panel-heading">CIA_26</div>
-                        <div class="panel-body" style="min-height: 400px; max-height: 400px;">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">CIA_26</h3>
+                        </div>
+                        <div class="panel-body" style="min-height: 420px; max-height: 420px;">
                             Report Date 27 April. 2003. FBI: A photo of the man using the name Mark Davis was examined
                             by a representative of the Canadian police in NYC. The Canadian police investigator
                             identified the man in the photo to be Hamid Alwan, a Saudi who overstayed a travel visa and
@@ -75,12 +39,12 @@
                     </div>
                 </div>
 
-                <div class="col-sm-6 col-md-6">
+                <div class="doc col-md-2">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">FBI_16</h3>
                         </div>
-                        <div class="panel-body" style="min-height: 400px; max-height: 400px;">
+                        <div class="panel-body" style="min-height: 420px; max-height: 420px;">
                             Report Date April 18, 2003. FBI: A routine check of security at the New York Stock Exchange
                             lNYSEl reveals some anomalies in background checks of several persons who now hold vendor's
                             IDS that allow them access to the NYSE provided that they are accompanied by security
@@ -104,20 +68,24 @@
             <div>
                 <div>
                     <h4>Entity</h4>
-                    <h5>find and describe the pairwise relationship between key entities in the texts in the two documents, list the connections in a format of (entity1, entity2, relationship description)</h5>
+                    <h5>find and describe the pairwise relationship between key entities in the texts in the two
+                        documents, list the connections in a format of (entity1, entity2, relationship description)</h5>
                     <textarea class="form-control" rows="5" id="entity" style="resize:none;"></textarea>
                 </div>
                 <div>
                     <h4>Summary</h4>
                     <h5>
-                        Evidence File, put them together into a subgraph, if you think the connections should be combined into one (by direct deduction and so that the relationship is neater), go ahead but make sure you annotate the path for each new connection after the relationship description.
+                        Evidence File, put them together into a subgraph, if you think the connections should be
+                        combined into one (by direct deduction and so that the relationship is neater), go ahead but
+                        make sure you annotate the path for each new connection after the relationship description.
                     </h5>
                     <textarea class="form-control" rows="5" id="summary" style="resize:none;"></textarea>
                 </div>
                 <div>
                     <h4>Hypothesis</h4>
                     <h5>
-                        Summarize the information based on two documents. Schema into narrative statements that contain “who, what, where, when” as much as possible.
+                        Summarize the information based on two documents. Schema into narrative statements that contain
+                        “who, what, where, when” as much as possible.
                     </h5>
                     <textarea class="form-control" rows="5" id="hypo" style="resize:none;"></textarea>
                 </div>
@@ -128,5 +96,6 @@
 
         </div>
     </div>
+</div>
 </body>
 </html>
